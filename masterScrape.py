@@ -113,7 +113,7 @@ tempCount = 2
 wb2 = xlsxwriter.Workbook('port.xlsx')
 s1 = wb2.add_worksheet()
 for tick in portfolio:
-	#df = load_yahoo_quote(tick, 2018, 1, 1, 2019, 1, 1, info='quote', format_output='dataframe')
+	df = load_yahoo_quote(tick, 2018, 1, 1, 2019, 1, 1, info='quote', format_output='dataframe')
 	wb = xlrd.open_workbook(tick + '.xlsx') 
 	sheet = wb.sheet_by_index(0)
 	rowEnd = sheet.nrows - 1
